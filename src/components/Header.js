@@ -1,14 +1,11 @@
-import React, { useState } from "react";
 import Menu from "./Menu";
 
-function Header() {
-  const [darkMode, setDarkMode] = useState(false);
-
+function Header({ darkMode,handleDarkMode }) {
   return (
     <div className={`ui fixed menu ${darkMode ? "inverted" : ""}`}>
       <div className="menu item">Fwitter</div>
       <div className="right menu">
-        <Menu />
+        <Menu handleDarkMode={handleDarkMode} />
       </div>
     </div>
   );
